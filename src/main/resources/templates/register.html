@@ -1,0 +1,31 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Register</title>
+    </head>
+    <body>
+        <form action="#" th:action="@{/register}" th:object="${user}" method="post">
+            <table>
+                <tr>
+                    <td><label for="name">Name</label></td>
+                    <td><input th:field="*{name}" type="text" name="name"></input></td>
+                </tr>
+                <tr>
+                    <td><label for="dueDate">DueDate</label></td>
+                    <td><input th:field="*{dueDate}" type="date" name="dueDate"></input></td>
+                </tr>
+                <tr>
+                    <td><label for="emailId">Email</label></td>
+                    <td><input th:field="*{emailId}" type="text" name="emailId"></input></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password</label></td>
+                    <td><input th:field="*{password}" type="password" name="password"></input></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Submit"></input></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
